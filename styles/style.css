@@ -17,7 +17,7 @@ a {
 
 .top-header {
   margin-inline: auto;
-  width: min(95%, 1321px);
+  width: min(93%, 1321px);
   margin-top: 50px;
   background-color: #161616;
   display: flex;
@@ -66,7 +66,6 @@ a {
 }
 
 .header-button:hover .header-icon {
-  /* transform: translateX(5px); */
   animation: moving 0.4s ease-in infinite alternate;
 }
 
@@ -83,7 +82,7 @@ a {
 /* main container style */
 .container {
   margin: 130px auto;
-  width: min(95%, 1321px);
+  width: min(93%, 1321px);
   display: flex;
   gap: 30px;
 }
@@ -113,6 +112,11 @@ a {
   background-color: #fff;
   color: black;
   font-weight: 500;
+}
+
+.unSelected-link:hover {
+  background-color: #dd0000;
+  color: white;
 }
 
 .selected-link {
@@ -150,6 +154,7 @@ a {
   border-radius: 5px;
   display: inline-block;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .blog-title {
@@ -253,18 +258,18 @@ footer {
   font-weight: 600;
   font-size: 40px;
   text-align: center;
-  padding-top: 100px;
+  padding: 80px 0;
 }
 
 hr {
   color: #fff;
   opacity: 10%;
-  margin: 50px 0;
-  width: 90%;
+  width: 85%;
   margin-inline: auto;
 }
 
 .footer-link {
+  margin: 40px 15px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -285,17 +290,21 @@ hr {
 }
 
 .social-links {
-  margin-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .social-link {
   color: #fff;
+  opacity: 90%;
   font-size: 22px;
+}
+
+.social-link:hover {
+  opacity: 100%;
 }
 
 /* Media Query For Medium Device */
@@ -371,14 +380,14 @@ hr {
   }
 
   .footer-title {
-    padding-top: 70px;
+    padding: 50px 0;
   }
 }
 
 /* Media Query for Mobile Device */
 @media screen and (max-width: 596px) {
   .top-header {
-    margin-top: 10px;
+    margin-top: 15px;
     flex-direction: column;
     align-items: center;
   }
@@ -395,8 +404,8 @@ hr {
   }
 
   .header-title {
-    font-size: 24px;
-    line-height: 33px;
+    font-size: 30px;
+    line-height: 35px;
     margin-top: 28px;
   }
 
@@ -406,8 +415,7 @@ hr {
 
   .header-banner {
     width: 70%;
-    margin-right: 0;
-    margin-inline: auto;
+    margin-right: 38px;
   }
 
   .container {
@@ -425,9 +433,14 @@ hr {
     padding: 0;
   }
 
+  .page-link {
+    font-size: 18px;
+    padding: 12px 0;
+    width: 200px;
+  }
+
   .unSelected-link {
     border: 1px solid #e8e8e8;
-    font-size: 20px;
   }
 
   .blogs,
@@ -436,11 +449,17 @@ hr {
   }
 
   .footer-title {
-    padding-top: 24px;
+    font-size: 22px;
+    padding: 24px 0;
+  }
+
+  .footer-link {
+    margin: 30px 15px;
   }
 
   .footer-link li {
     width: 100%;
     text-align: center;
+    font-size: 14px;
   }
 }
